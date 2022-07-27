@@ -1,25 +1,34 @@
 module.exports = {
-    components: './src/components',
+    components: './src/stories',
     outputPath: './dist/playroom',
 
     // Optional:
     title: 'My Awesome Library',
-    themes: './src/themes',
-    snippets: './playroom/snippets.js',
-    frameComponent: './playroom/FrameComponent.js',
-    scope: './playroom/useScope.js',
     widths: [320, 768, 1024],
     port: 9000,
     openBrowser: true,
     paramType: 'search', // default is 'hash'
     exampleCode: `
-    <Button>
-      Hello World!
-    </Button>
+    <div>Hey there, try to add something. i.e. this component: <Button /></div>
   `,
     baseUrl: '/playroom/',
     webpackConfig: () => ({
-        // Custom webpack config goes here...
+        module: {
+            rules: [
+                {
+                    test: /\.m?js$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env', '@babel/preset-react'
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
     }),
     iframeSandbox: 'allow-scripts',
 };

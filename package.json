@@ -65,6 +65,7 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "css-loader": "^6.7.1",
     "playroom": "^0.28.0",
     "prop-types": "^15.8.1",
     "webpack": "^5.74.0"

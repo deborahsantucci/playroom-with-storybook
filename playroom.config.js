@@ -9,7 +9,7 @@ module.exports = {
     openBrowser: true,
     paramType: 'search', // default is 'hash'
     exampleCode: `
-    <div>Hey there, try to add something. i.e. this component: <Button /></div>
+    <div>Hey there, try to add something. <br /> i.e. this component: <Button label="Example button" primary /></div>
   `,
     baseUrl: '/playroom/',
     webpackConfig: () => ({
@@ -26,7 +26,13 @@ module.exports = {
                             ]
                         }
                     }
-                }
+                },
+
+                {
+                    test: /\.css$/i,
+                    exclude: /node_modules/,
+                    use: ["style-loader", "css-loader"],
+                },
             ]
         }
     }),

@@ -7,7 +7,7 @@ module.exports = {
     widths: [320, 768, 1024],
     port: 9000,
     openBrowser: true,
-    paramType: 'search', // default is 'hash'
+    paramType: 'hash', // default is 'hash'
     exampleCode: `
     <div>Hey there, try to add something. <br /> i.e. this component: <Button label="Example button" primary /></div>
   `,

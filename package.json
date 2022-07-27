@@ -68,6 +68,7 @@
     "css-loader": "^6.7.1",
     "playroom": "^0.28.0",
     "prop-types": "^15.8.1",
+    "storybook-addon-playroom": "^3.0.1",
     "webpack": "^5.74.0"
   }
 }

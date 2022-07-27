@@ -21,6 +21,11 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
+Primary.parameters = {
+  playroom: {
+    code: '<Button>Hello Button</Button>',
+  },
+}
 
 export const Secondary = Template.bind({});
 Secondary.args = {

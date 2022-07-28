@@ -4,14 +4,14 @@ module.exports = {
 
     // Optional:
     title: 'My Awesome Library',
+    baseUrl: './',
     widths: [320, 768, 1024],
     port: 9000,
-    openBrowser: true,
+    openBrowser: false,
     paramType: 'hash', // default is 'hash'
     exampleCode: `
     <div>Hey there, try to add something. <br /> i.e. this component: <Button label="Example button" primary /></div>
   `,
-    baseUrl: '/playroom/',
     webpackConfig: () => ({
         module: {
             rules: [
